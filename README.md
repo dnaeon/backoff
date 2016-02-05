@@ -8,7 +8,7 @@ A simple backoff algorithm in Go (Golang)
 ## Install
 
 ```
-$ go get -v github.com/jpillora/backoff
+$ go get -v github.com/dnaeon/backoff
 ```
 
 ## Usage
