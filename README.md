@@ -3,6 +3,7 @@
 A simple backoff algorithm in Go (Golang)
 
 [![GoDoc](https://godoc.org/github.com/dnaeo/backoff?status.svg)](https://godoc.org/github.com/dnaeon/backoff)
+[![Build Status](https://travis-ci.org/dnaeon/backoff.svg?branch=master)](https://travis-ci.org/dnaeon/backoff)
 
 ## Install
 
