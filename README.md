@@ -122,6 +122,7 @@ Reset!
 ## Credits
 
 Ported from some JavaScript written by [@tj](https://github.com/tj)
+This package is a fork of https://github.com/jpillora/backoff
 
 ## MIT License
 
