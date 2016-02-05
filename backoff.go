@@ -6,6 +6,13 @@ import (
 	"time"
 )
 
+var DefaultBackoff = &Backoff{
+	Min:    100 * time.Millisecond,
+	Max:    10 * time.Second,
+	Factor: 2.0,
+	Jitter: false,
+}
+
 // Backoff is a time.Duration counter. It starts at Min.
 // After every call to Duration() it is  multiplied by Factor.
 // It is capped at Max. It returns to Min on every call to Reset().
@@ -40,7 +47,7 @@ func (b *Backoff) Duration() time.Duration {
 
 	b.attempts++
 
-	return time.Duration(dur)
+	return time.Duration(d)
 }
 
 //Resets the current value of the counter back to Min
