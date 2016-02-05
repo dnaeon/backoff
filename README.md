@@ -1,24 +1,30 @@
-# Backoff
+## Backoff
 
 A simple backoff algorithm in Go (Golang)
 
-[![GoDoc](https://godoc.org/github.com/jpillora/backoff?status.svg)](https://godoc.org/github.com/jpillora/backoff)
+[![GoDoc](https://godoc.org/github.com/dnaeo/backoff?status.svg)](https://godoc.org/github.com/dnaeon/backoff)
 
-### Install
+## Install
 
 ```
 $ go get -v github.com/jpillora/backoff
 ```
 
-### Usage
+## Usage
 
-Backoff is a `time.Duration` counter. It starts at `Min`. After every call to `Duration()` it is  multiplied by `Factor`. It is capped at `Max`. It returns to `Min` on every call to `Reset()`. `Jitter` adds randomness ([see below](#example-using-jitter)). Used in conjunction with the `time` package.
+Backoff is a `time.Duration` counter. It starts at `Min`.
+After every call to `Duration()` it is  multiplied by `Factor`.
+
+It is capped at `Max` and returns to `Min` on every call to `Reset()`.
+
+`Jitter` adds randomness ([see below](#example-using-jitter)).
+Used in conjunction with the `time` package.
 
 ---
 
-#### Simple example
+### Simple example
 
-``` go
+```go
 
 b := &backoff.Backoff{
 	//These are the defaults
@@ -48,9 +54,9 @@ Reset!
 
 ---
 
-#### Example using `net` package
+### Example using the `net` package
 
-``` go
+```go
 b := &backoff.Backoff{
     Max:    5 * time.Minute,
 }
@@ -70,14 +76,17 @@ for {
 	conn.Close()
 	//disconnected
 }
-
 ```
 
 ---
 
-#### Example using `Jitter`
+### Example using `Jitter`
 
-Enabling `Jitter` adds some randomization to the backoff durations. [See Amazon's writeup of performance gains using jitter](http://www.awsarchitectureblog.com/2015/03/backoff.html). Seeding is not necessary but doing so gives repeatable results.
+Enabling `Jitter` adds some randomization to the backoff durations.
+See
+[Amazon's writeup of performance gains using jitter](http://www.awsarchitectureblog.com/2015/03/backoff.html).
+
+Seeding is not necessary but doing so gives repeatable results.
 
 ```go
 import "math/rand"
@@ -110,13 +119,13 @@ Reset!
 214.957989ms
 ```
 
-#### Credits
+## Credits
 
 Ported from some JavaScript written by [@tj](https://github.com/tj)
 
-#### MIT License
+## MIT License
 
-Copyright © 2015 Jaime Pillora &lt;dev@jpillora.com&gt;
+Copyright © 2015 Jaime Pillora <dev@jpillora.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
