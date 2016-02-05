@@ -50,7 +50,7 @@ func (b *Backoff) Duration() time.Duration {
 	return time.Duration(d)
 }
 
-//Resets the current value of the counter back to Min
+// Resets the current value of the counter back to Min
 func (b *Backoff) Reset() {
 	b.attempts = 0
 }
