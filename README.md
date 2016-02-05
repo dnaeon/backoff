@@ -127,6 +127,7 @@ This package is a fork of https://github.com/jpillora/backoff
 ## MIT License
 
 Copyright © 2015 Jaime Pillora <dev@jpillora.com>
+Copyright © 2016 Marin Atanasov Nikolov <dnaeon@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
